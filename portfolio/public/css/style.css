@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url("../img/perso/sakura.png");
+	background-repeat: repeat;
+	font-family: 'Roboto', sans-serif;
+}
+
+.vertical-center {
+ min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+ min-height: 100vh; /* These two lines are counted as one :visage_légèrement_souriant:       */
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+nav li a{
+	font-weight: bold;
+	color: #FF8E00;
+	text-decoration: none;
+}
+
+.navactive{
+	font-weight: bold;
+	background-color: #FF8E00;
+	color: #FFFFFF;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+a:hover{
+	color: #FF5419;
+}
+
+aside{
+	margin-top: 8%;
+}
+
+main{
+	padding-top: 8%;
+}
+
+#avatar{
+	margin-top: 8%;
+	width: 65%;
+	border-radius: 50%;
+	border: solid 5px #2D2D2D;
+}
+
+#banner{
+	width: 100%;
+}
+
+#socialnet{
+	color: #2D2D2D;
+}
+
+.highlight{
+	color: #FF8E00;
+}
+
+footer{
+	background-color: #808080;
+}
+
+#mentionleg{
+	color: #212529;
+}
+
+#mentionleg:hover{
+	color: #FF5419;
+}
+
+h1, h2{
+	padding-bottom: 5%;
+}
+
+.dates_diplome{
+	font-weight: bold;
+}
+
+.fa-4x{
+	padding: 0% 10% 0% 10%;
+}
+
+.linksocialnet{
+	color: #2D2D2D
+}
+
+#competencestitle{
+	margin-top: 8%;
+}
+
+h4{
+	margin-bottom: 5%;
+}
+
+#cardform{
+	padding: 5% 2% 5% 2%;
+	margin-bottom: 5%;
+
+}
+
+.btn-custom{
+	background-color: #FF8E00;
+}
+
