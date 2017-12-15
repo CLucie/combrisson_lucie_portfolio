@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Messages extends Migration
+class CreateMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,9 +18,8 @@ class Messages extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('subject');
-            $table->string('message');
+            $table->text('message');
             $table->timestamps();
-            $table->foreign('id_user')->references('id_user')->on('user');
         });
     }
 
