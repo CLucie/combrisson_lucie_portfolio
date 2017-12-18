@@ -2,7 +2,7 @@
 <html>
 <!-- Head -->
 <head>
-	<title>Lucie Combrisson</title>
+	<title>Admin Lucie Combrisson</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,11 +21,6 @@
 
 </body>
 <!-- Footer -->
-<footer class="container-fluid fixed-bottom text-center"">
-	<p>
-		CLucie &copy;2017 - <a id="mentionleg" href="#">Mentions Légales</a>
-	</p>
-</footer>
 <!-- End Footer -->
 
 <!-- JS Bootstrap & MD -->

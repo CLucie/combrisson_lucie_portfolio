@@ -15,3 +15,4 @@ Route::get('/', 'HomePageController@index')->name('home');
 Route::get('/competences', 'QualifController@index')->name('skills');
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/admin', 'AdminConnexionController@index')->name('connexion');
