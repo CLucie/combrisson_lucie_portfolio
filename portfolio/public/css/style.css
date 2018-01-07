@@ -115,3 +115,20 @@ h4{
 	background-color: #FF8E00;
 }
 
+ul li {
+	list-style-type: none;
+}
+
+.carousel-caption {
+	font-weight: bold;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+#titleslider {
+	font-weight: bold;
+	color: #FF5419;
+}
+
+#descrslider {
+	color: #FF8E00;
+}

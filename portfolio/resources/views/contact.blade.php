@@ -12,7 +12,7 @@
 		    <a class="nav-link" href="{{route('home')}}">Présentation</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="{{route('skills')}}">Compétences</a>
+		    <a class="nav-link" href="{{route('qualifskills')}}">Compétences</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link" href="{{route('portfolio')}}">Portfolio</a>

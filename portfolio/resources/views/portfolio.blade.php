@@ -12,7 +12,7 @@
 		    <a class="nav-link" href="{{route('home')}}">Présentation</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="{{route('skills')}}">Compétences</a>
+		    <a class="nav-link" href="{{route('qualifskills')}}">Compétences</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link active navactive" href="{{route('portfolio')}}">Portfolio</a>
@@ -30,45 +30,25 @@
 			<div id="carousel-example-2" class="col-12 carousel slide carousel-fade" data-ride="carousel">
     			<!-- Indicators -->
 			    <ol class="carousel-indicators">
-			        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-			        <li data-target="#carousel-example-2" data-slide-to="1"></li>
-			        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+			    	@foreach($projets as $key => $value)
+			        <li data-target="#carousel-example-2" data-slide-to="{{$key}}" @if($key==0) class="active" @endif></li>
+			        @endforeach
 			    </ol>
     			<!-- End Indicators -->
     			<!-- Slides -->
     			<div class="carousel-inner" role="listbox">
-        			<div class="carousel-item active">
-            			<div class="view hm-black-light">
-                			<img class="d-block w-100" src="http://via.placeholder.com/960x540/789625" alt="{alt}">
-                				<div class="mask"></div>
-            			</div>
-            			<div class="carousel-caption">
-                			<h3 class="h3-responsive">{title}</h3>
-                			<p>{description}</p>
-            			</div>
-        			</div>
-			        <div class="carousel-item">
-			            <!--Mask color-->
+    				@foreach($projets as $key => $value)
+			        <div class="carousel-item @if($key==0) active @endif">
 			            <div class="view hm-black-light">
-			                <img class="d-block w-100" src="http://via.placeholder.com/960x540/129876" alt="{alt}">
-			                <div class="mask"></div>
+			                <img class="d-block w-100" src="{{asset('img/perso/projets/'.$value->src)}}" alt="{{$value->alt}}">
+			                <div class="mask pattern-6"></div>
 			            </div>
 			            <div class="carousel-caption">
-			                <h3 class="h3-responsive">{title}</h3>
-			                <p>{description}</p>
+			                <h3 id="titleslider" class="h3-responsive">{{$value->title}}</h3>
+			                <p id="descrslider">{{$value->description}}</p>
 			            </div>
 			        </div>
-			        <div class="carousel-item">
-			            <!--Mask color-->
-			            <div class="view hm-black-light">
-			                <img class="d-block w-100" src="http://via.placeholder.com/960x540/851736" alt="{alt}">
-			                <div class="mask"></div>
-			            </div>
-			            <div class="carousel-caption">
-			                <h3 class="h3-responsive">{title}</h3>
-			                <p>{description}</p>
-			            </div>
-			        </div>
+			        @endforeach
     			</div>
     			<!-- End Slides -->
     			<!--Controls-->

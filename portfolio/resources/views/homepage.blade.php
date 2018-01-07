@@ -12,7 +12,7 @@
 		    <a class="nav-link active navactive" href="{{route('home')}}">Présentation</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="{{route('skills')}}">Compétences</a>
+		    <a class="nav-link" href="{{route('qualifskills')}}">Compétences</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link" href="{{route('portfolio')}}">Portfolio</a>
@@ -46,10 +46,10 @@
 			<!-- Main -->
 			<main class="col-8">
 				<h1>
-					Bonjour, je suis <span class="highlight">{Lucie Combrisson}</span>.
+					Bonjour, je suis <span class="highlight">{{$me->first_name}} {{$me->name}}</span>.
 				</h1>
 				<p>
-					Étudiante stagiaire de la formation professionnelle dispensée par l'organisme AFORMAC, pour l'obtension du Titre Professionnel Developpeur Web.
+					Étudiante stagiaire de la formation professionnelle dispensée par l'organisme AFORMAC, pour l'obtention du Titre Professionnel Developpeur Web.
 				</p>
 			</main>
 			<!-- End Main -->

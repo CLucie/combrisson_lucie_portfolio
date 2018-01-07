@@ -7,7 +7,8 @@ use App\Models\Qualification;
 
 class QualifController extends Controller
 {
-    public function index(){
-    	return view('competences');
+    public function admin(){
+    	$qualif = Qualification::all();
+    	return view('admin/adminqualifications', compact('qualif'));
     }
 }

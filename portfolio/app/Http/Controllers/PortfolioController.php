@@ -11,4 +11,9 @@ class PortfolioController extends Controller
     	$projets = Project::all();
     	return view('portfolio', compact('projets'));
     }
+
+    public function admin(){
+    	$projets = Project::all();
+    	return view('admin/adminprojets', compact('projets'));
+    }
 }

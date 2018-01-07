@@ -12,7 +12,7 @@
 		    <a class="nav-link" href="{{route('home')}}">Présentation</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link active navactive" href="{{route('skills')}}">Compétences</a>
+		    <a class="nav-link active navactive" href="{{route('qualifskills')}}">Compétences</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link" href="{{route('portfolio')}}">Portfolio</a>
@@ -36,18 +36,13 @@
 						Qualifications
 						</h2>
 					    <hr>
-				        <p>
-						<span class="dates_diplome">{start-date} - {end_date}</span><br>
-						{diploma}
-						</p>
+					    @foreach ($qualif as $qualification)			    
 						<p>
-						<span class="dates_diplome">{start-date} - {end_date}</span><br>
-						{diploma}
+						<span class="dates_diplome">{{$qualification->start_date}} - {{$qualification->end_date}}</span><br>
+						{{$qualification->diploma}}
 						</p>
-						<p>
-						<span class="dates_diplome">{start-date} - {end_date}</span><br>
-						{diploma}
-						</p>
+
+						@endforeach
 				    </div>
 				</div>
 			</aside>
@@ -58,6 +53,13 @@
 				<h2>
 					Compétences
 				</h2>
+				<ul class="col-8">
+					 @foreach ($skills as $skill)
+					<li>
+    					<span>{{$skill->name}}</span><div class="progress"><div class="progress-bar bg-warning progress-bar-striped active" role="progressbar" style="width: {{$skill->percentage}}%" aria-valuenow="{{$skill->level}}" aria-valuemin="0" aria-valuemax="4"></div></div>
+					</li>
+					@endforeach
+				</ul>
 			</main>
 			<!-- End Main Skill -->
 		</div>

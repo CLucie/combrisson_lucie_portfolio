@@ -8,6 +8,7 @@ use App\Models\User;
 class HomePageController extends Controller
 {
     public function index(){
-    	return view('homepage');
+    	$me = User::find(1);
+    	return view('homepage', compact('me'));
     }
 }
