@@ -1,4 +1,4 @@
-@extends('admin/adminlayout')
+@extends('admin.adminlayout')
 
 @section('contenu')
 <!-- Body -->
@@ -10,6 +10,12 @@
 		<!-- Message -->
 		
 		<div>
+			@if ($message = Session::get('success'))
+        	<div class="alert alert-success">
+            <p>{{ $message }}</p>
+        	</div>
+    		@endif
+
 			@foreach ($qualif as $qualif)
 			<h5 class="soustitre">
 				{{$qualif->diploma}}
@@ -29,7 +35,7 @@
 			<p>
 				<span class="intitulechamps">Code postal :</span> {{$qualif->zip_code}}
 			</p>
-			<button type="button" class="btn btn-info">Modifier</button><button type="button" class="btn btn-danger">Supprimer</button>
+			<a class="btn btn-info btn-rounded editqualif" href="#"  data-id="{{$qualif->id_qualification}}">Modifier</a><a class="btn btn-danger btn-rounded supprqualif" href="#"  data-id="{{$qualif->id_qualification}}">Supprimer</a>
 			<hr>
 			@endforeach
 		</div>

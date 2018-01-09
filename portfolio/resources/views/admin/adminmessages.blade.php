@@ -10,6 +10,12 @@
 		<!-- Message -->
 		
 		<div>
+			@if ($message = Session::get('success'))
+        	<div class="alert alert-success">
+            <p>{{ $message }}</p>
+        	</div>
+    		@endif
+
 			@foreach ($messages as $messages)
 			<h5 class="soustitre">
 				{{$messages->subject}}
@@ -23,7 +29,7 @@
 			<p>
 				<span class="intitulechamps">Message :</span> {{$messages->message}}
 			</p>
-			<button type="button" class="btn btn-danger btn-rounded">Supprimer</button>
+			<a class="btn btn-danger btn-rounded supprmessage" href="#"  data-id="{{$messages->id_message}}">Supprimer</a>
 			<hr>
 			@endforeach
 		</div>

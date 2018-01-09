@@ -17,9 +17,15 @@ class ContactController extends Controller
     	return view('admin/adminmessages', compact('messages'));
     }
 
-    // public function delete(){
-    // 	$messages = Message::all();
-    // 	return view('adminmessages')->with('message', 'Le message à bien été supprimée.');
-    // }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(){
+        $supp = Message::where("id_message", "=" , $_GET['id'])->delete();
+        return redirect('admin/messages') -> with('success','Article deleted successfully');
+    }
 
 }

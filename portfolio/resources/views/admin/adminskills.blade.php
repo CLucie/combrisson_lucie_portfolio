@@ -10,6 +10,12 @@
 		<!-- Message -->
 		
 		<div>
+			@if ($message = Session::get('success'))
+        	<div class="alert alert-success">
+            <p>{{ $message }}</p>
+        	</div>
+    		@endif
+
 			@foreach ($skills as $skill)
 			<h5 class="soustitre">
 				{{$skill->name}}
@@ -23,7 +29,7 @@
 			<p>
 				<span class="intitulechamps">Logo :</span> {{$skill->logo}}
 			</p>
-			<button id="btneditskill" type="button" class="btn btn-info" onclick="javascript:window.location='{{route('adeditskills')}}'; return false;">Modifier</button><button id="btndeleteskill" type="button" class="btn btn-danger">Supprimer</button>
+			<a class="btn btn-info btn-rounded editcompetence" href="#"  data-id="{{$skill->id_skill}}">Modifier</a><a class="btn btn-danger btn-rounded supprcompetence" href="#"  data-id="{{$skill->id_skill}}">Supprimer</a>
 			<hr>
 			@endforeach
 		</div>

@@ -1,34 +1,35 @@
-@extends('adminlayout')
+@extends('admin.adminlayout')
 
 @section('contenu')
 <!-- Body -->
 	<!-- Main -->
 	<main class="col-9">
 		<h3>
-			Compétences <button type="button" class="btn btn-success">Ajouter</button>
+			Compétences
 		</h3>
 		<!-- Message -->
 		
 		<div>
-			@foreach ($skills as $skill)
-			<form class="md-form">
+			<form method="POST" action="{{route('admodifskills')}}">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+				<input type="hidden" name="id" value="{{$id}}">
+					<div class="md-form">
+						<input type="text" name="name" class="form-control" value="{{$edit[0]->name}}">
+	    			</div>
 
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$skill->name}}">Nom de la compétence</label>
+	    			<div class="md-form">
+	    				<input type="text" name="level" class="form-control" value="{{$edit[0]->level}}">
+	    			</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$skill->level}}">Niveau</label>
+	    			<div class="md-form">
+	    				<input type="text" name="percentage" class="form-control" value="{{$edit[0]->percentage}}">
+					</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$skill->percentage}}">Pourcentage</label>
-				
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$skill->logo}}">Logo</label>
-			
-				<button type="submit" class="btn btn-info">Valider</button>
+					<div class="md-form">
+						<input type="text" name="logo" class="form-control" value="{{$edit[0]->logo}}">
+					</div>
+				<button>Valider</button>
 			</form>
-			<hr>
-			@endforeach
 		</div>
 		<!-- End Message -->
 	</main>

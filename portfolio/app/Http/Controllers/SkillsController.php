@@ -12,18 +12,28 @@ class SkillsController extends Controller
     	return view('admin/adminskills', compact('skills'));
     }
 
-    // public function add(){
-    // 	$skills = Skill::all();
-    // 	return view('adminskills', compact('skills'));
-    // }
-
-    public function update(){
-    	$skills = Skill::all();
-    	return view('admin/edit/admineditskills');
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(){
+        $supp = Skill::where("id_skill", "=" , $_GET['id'])->delete();
+        return redirect('admin/competences') -> with('success','Article deleted successfully');
     }
 
-    // public function delete($id){
-    // 	$skills = Skill::all();
-    // 	return view('adminskills')->with('message', 'La compétence à bien été supprimée.');
-    // }
+    public function edit()
+    {
+        $id = $_GET['id'];
+        $edit = Skill::where("id_skill", "=" , $id)->get();
+        return view('admin/edit/admineditskills',compact('edit', 'id'));
+    }
+
+    public function update(Request $request){
+        $id = $request->id;
+        $update = Skill::where('id_skill', '=', $id )->update(array('name' => $request->name, 'percentage' => $request->percentage, 'logo' => $request->logo));
+
+        return redirect('admin/competences')->with('success','Article updated successfully');
+    }
 }

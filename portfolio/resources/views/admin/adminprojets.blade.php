@@ -1,18 +1,24 @@
-@extends('admin/adminlayout')
+@extends('admin.adminlayout')
 
 @section('contenu')
 <!-- Body -->
 	<!-- Main -->
-	<main class="col-10">
+	<main class="col-9">
 		<h3>
 			Projets <button type="button" class="btn btn-success">Ajouter</button>
 		</h3>
 		<!-- Message -->
 		
 		<div>
+			@if ($message = Session::get('success'))
+        	<div class="alert alert-success">
+            <p>{{ $message }}</p>
+        	</div>
+    		@endif
+
 			@foreach ($projets as $projet)
 			<h5 class="soustitre">
-				Slider #{{$projet->id}}
+				Slider #{{$projet->id_projet}}
 			</h5>
 			<p>
 				<span class="intitulechamps">Source de l'image :</span> {{$projet->src}}
@@ -26,7 +32,7 @@
 			<p>
 				<span class="intitulechamps">Description :</span> {{$projet->description}}
 			</p>
-			<button type="button" class="btn btn-info">Modifier</button><button type="button" class="btn btn-danger">Supprimer</button>
+			<a class="btn btn-info btn-rounded editprojet" href="#"  data-id="{{$projet->id_projet}}">Modifier</a><a class="btn btn-danger btn-rounded supprprojet" href="#"  data-id="{{$projet->id_projet}}">Supprimer</a>
 			<hr>
 			@endforeach
 		</div>

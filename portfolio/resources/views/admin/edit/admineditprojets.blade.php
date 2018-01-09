@@ -1,37 +1,35 @@
-@extends('adminlayout')
+@extends('admin.adminlayout')
 
 @section('contenu')
 <!-- Body -->
 	<!-- Main -->
 	<main class="col-9">
 		<h3>
-			Projets <button type="button" class="btn btn-success">Ajouter</button>
+			Projets
 		</h3>
 		<!-- Message -->
 		
 		<div>
-			@foreach ($projets as $projet)
-			<h5 class="soustitre">
-				Slider #{{$projet->id}}
-			</h5>
-			<form class="md-form">
+			<form method="POST" action="{{route('admodifportfolio')}}">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+				<input type="hidden" name="id" value="{{$id}}">
+					<div class="md-form">
+						<input type="text" name="src" class="form-control" value="{{$edit[0]->src}}">
+	    			</div>
 
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$projet->src}}">Source de l'image</label>
+	    			<div class="md-form">
+	    				<input type="text" name="alt" class="form-control" value="{{$edit[0]->alt}}">
+	    			</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$projet->alt}}">Attribut alt</label>
+	    			<div class="md-form">
+	    				<input type="text" name="title" class="form-control" value="{{$edit[0]->title}}">
+					</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$projet->title}}">Attribut title</label>
-				
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$projet->description}}">Description</label>
-			
-				<button type="submit" class="btn btn-info">Valider</button>
+					<div class="md-form">
+						<input type="text" name="description" class="form-control" value="{{$edit[0]->description}}">
+					</div>
+				<button>Valider</button>
 			</form>
-			<hr>
-			@endforeach
 		</div>
 		<!-- End Message -->
 	</main>

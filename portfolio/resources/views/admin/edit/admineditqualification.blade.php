@@ -1,40 +1,43 @@
-@extends('adminlayout')
+@extends('admin.adminlayout')
 
 @section('contenu')
 <!-- Body -->
 	<!-- Main -->
 	<main class="col-9">
 		<h3>
-			Qualifications <button type="button" class="btn btn-success">Ajouter</button>
+			Qualifications
 		</h3>
 		<!-- Message -->
 		
 		<div>
-			@foreach ($qualif as $qualif)
-			<form class="md-form">
+			<form method="POST" action="{{route('admodifqualification')}}">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+				<input type="hidden" name="id" value="{{$id}}">
+					<div class="md-form">
+						<input type="text" name="diploma" class="form-control" value="{{$edit[0]->diploma}}">
+	    			</div>
 
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$qualif->diploma}}">Titre de la qualification</label>
+	    			<div class="md-form">
+	    				<input type="text" name="start_date" class="form-control" value="{{$edit[0]->start_date}}">
+	    			</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$qualif->start_date}}">Année de début</label>
+	    			<div class="md-form">
+	    				<input type="text" name="end_date" class="form-control" value="{{$edit[0]->end_date}}">
+					</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$qualif->end_date}}">Année de fin</label>
-				
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$qualif->establishment}}">Etablissement</label>
-				
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$qualif->city}}">Ville</label>
-				
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="" placeholder="{{$qualif->zip_code}}">Code postal</label>
-			
-				<button type="submit" class="btn btn-info">Valider</button>
+					<div class="md-form">
+						<input type="text" name="establishment" class="form-control" value="{{$edit[0]->establishment}}">
+					</div>
+
+					<div class="md-form">
+						<input type="text" name="city" class="form-control" value="{{$edit[0]->city}}">
+					</div>
+
+					<div class="md-form">
+						<input type="text" name="zip_code" class="form-control" value="{{$edit[0]->zip_code}}">
+					</div>
+				<button>Valider</button>
 			</form>
-			<hr>
-			@endforeach
 		</div>
 		<!-- End Message -->
 	</main>

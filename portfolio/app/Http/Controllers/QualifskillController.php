@@ -11,7 +11,7 @@ class QualifskillController extends Controller
     public function index(){
     	$qualif = Qualification::all();
     	$skills = Skill::all();
-    	return view('admin/competences', compact('qualif','skills'));
+    	return view('competences', compact('qualif','skills'));
     
     }
     
