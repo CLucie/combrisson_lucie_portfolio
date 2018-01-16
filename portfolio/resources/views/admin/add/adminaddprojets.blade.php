@@ -1,32 +1,39 @@
-@extends('adminlayout')
+@extends('admin.adminlayout')
 
 @section('contenu')
 <!-- Body -->
 	<!-- Main -->
 	<main class="col-9">
 		<h3>
-			Projets <button type="button" class="btn btn-success">Ajouter</button>
+			Projets
 		</h3>
 		<!-- Message -->
 		
 		<div>
-			<form class="md-form">
+			<form method="POST" action="{{route('adstoreportfolio')}}">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="">Source de l'image</label>
+					<div class="md-form">
+						<input type="text" name="src" class="form-control" value="">
+						<label for="src">Source de l'image (.jpg ou .png)</label>
+	    			</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="">Attribut alt</label>
+	    			<div class="md-form">
+	    				<input type="text" name="alt" class="form-control" value="">
+	    				<label for="alt">Attribut alt</label>
+	    			</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="">Attribut title</label>
-				
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="">Description</label>
-			
-				<button type="submit" class="btn btn-info">Valider</button>
+	    			<div class="md-form">
+	    				<input type="text" name="title" class="form-control" value="">
+	    				<label for="title">Titre</label>
+					</div>
+
+					<div class="md-form">
+						<input type="text" name="description" class="form-control" value="">
+						<label for="description">Description</label>
+					</div>
+				<button class="btn btn-primary btn-rounded">Valider</button>
 			</form>
-			<hr>
 		</div>
 		<!-- End Message -->
 	</main>

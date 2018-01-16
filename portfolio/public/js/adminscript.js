@@ -45,6 +45,26 @@ $(document).ready(function(){
 	}
 	});
 
+
+	// Ajout projet
+	$(".addprojet").click(function(){
+		if(confirm("Voulez vous vraiment ajouter un projet ?")){
+			document.location="/admin/projets/add";
+	}
+	});
+	// Ajout qualification
+	$(".addqualif").click(function(){
+		if(confirm("Voulez vous vraiment ajouter une qualification ?")){
+			document.location="/admin/qualifications/add";
+	}
+	});
+	// Ajout compétence
+	$(".addcompetence").click(function(){
+		if(confirm("Voulez vous vraiment ajouter une compétence ?")){
+			document.location="/admin/competences/add";
+	}
+	});
+
 	
 
 

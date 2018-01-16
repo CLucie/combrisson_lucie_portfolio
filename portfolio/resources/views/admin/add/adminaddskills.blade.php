@@ -1,32 +1,39 @@
-@extends('adminlayout')
+@extends('admin.adminlayout')
 
 @section('contenu')
 <!-- Body -->
 	<!-- Main -->
 	<main class="col-9">
 		<h3>
-			Compétences <button type="button" class="btn btn-success">Ajouter</button>
+			Compétences
 		</h3>
 		<!-- Message -->
 		
 		<div>
-			<form class="md-form">
+			<form method="POST" action="{{route('adstoreskills')}}">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="">Nom de la compétence</label>
+					<div class="md-form">
+						<input type="text" name="name" class="form-control" value="">
+						<label for="name">Nom</label>
+	    			</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="">Niveau</label>
+	    			<div class="md-form">
+	    				<input type="text" name="level" class="form-control" value="">
+	    				<label for="level">Niveau/4</label>
+	    			</div>
 
-    			<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="">Pourcentage</label>
-				
-				<input type="text" id="diplome" class="form-control">
-    			<label for="diplome" class="">Logo</label>
-			
-				<button type="submit" class="btn btn-info">Valider</button>
+	    			<div class="md-form">
+	    				<input type="text" name="percentage" class="form-control" value="">
+	    				<label for="percentage">Pourcentage</label>
+					</div>
+
+					<div class="md-form">
+						<input type="text" name="logo" class="form-control" value="">
+						<label for="logo">Logo - Non utilisé pour l'instant</label>
+					</div>
+				<button class="btn btn-primary btn-rounded">Valider</button>
 			</form>
-			<hr>
 		</div>
 		<!-- End Message -->
 	</main>

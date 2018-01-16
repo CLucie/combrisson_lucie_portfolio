@@ -31,4 +31,25 @@ class QualifController extends Controller
 
         return redirect('admin/qualifications')->with('success','Article updated successfully');
     }
+
+    public function create()
+    {
+        return view('admin/add/adminaddqualification');
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'diploma' => 'required',
+            'establishment' => 'required',
+        ]);
+
+        $input = $request->all();
+
+        Qualification::create($input);
+
+        return redirect()->route('adqualification')->with('success','Article created successfully');
+    }
 }

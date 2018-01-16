@@ -5,7 +5,7 @@
 	<!-- Main -->
 	<main class="col-9">
 		<h3>
-			Compétences <button id="btnaddskills" type="button" class="btn btn-success">Ajouter</button>
+			Compétences <a class="btn btn-success addcompetence" href="#">Ajouter</a>
 		</h3>
 		<!-- Message -->
 		

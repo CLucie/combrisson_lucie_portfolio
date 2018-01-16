@@ -28,7 +28,7 @@
 					<div class="md-form">
 						<input type="text" name="description" class="form-control" value="{{$edit[0]->description}}">
 					</div>
-				<button>Valider</button>
+				<button class="btn btn-primary btn-rounded">Valider</button>
 			</form>
 		</div>
 		<!-- End Message -->

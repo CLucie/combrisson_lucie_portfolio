@@ -35,5 +35,26 @@ class PortfolioController extends Controller
 
         return redirect('admin/projets')->with('success','Article updated successfully');
     }
+
+    public function create()
+    {
+        return view('admin/add/adminaddprojets');
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'src' => 'required',
+            'alt' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+
+        $input = $request->all();
+
+        Project::create($input);
+
+        return redirect()->route('adportfolio')->with('success','Article created successfully');
+    }
     
 }

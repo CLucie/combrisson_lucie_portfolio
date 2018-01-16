@@ -132,3 +132,11 @@ ul li {
 #descrslider {
 	color: #FF8E00;
 }
+
+.progress{
+	background-color: lightgray;
+}
+
+.defautclucie{
+	font-style: italic;
+}

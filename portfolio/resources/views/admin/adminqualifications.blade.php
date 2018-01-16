@@ -5,7 +5,7 @@
 	<!-- Main -->
 	<main class="col-9">
 		<h3>
-			Qualifications <button type="button" class="btn btn-success">Ajouter</button>
+			Qualifications <a class="btn btn-success addqualif" href="#">Ajouter</a>
 		</h3>
 		<!-- Message -->
 		

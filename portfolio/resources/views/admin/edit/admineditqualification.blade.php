@@ -36,7 +36,7 @@
 					<div class="md-form">
 						<input type="text" name="zip_code" class="form-control" value="{{$edit[0]->zip_code}}">
 					</div>
-				<button>Valider</button>
+				<button class="btn btn-primary btn-rounded">Valider</button>
 			</form>
 		</div>
 		<!-- End Message -->

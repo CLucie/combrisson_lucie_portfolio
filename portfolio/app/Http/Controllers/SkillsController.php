@@ -36,4 +36,24 @@ class SkillsController extends Controller
 
         return redirect('admin/competences')->with('success','Article updated successfully');
     }
+
+    public function create()
+    {
+        return view('admin/add/adminaddskills');
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'level' => 'required',
+            'percentage' => 'required',
+        ]);
+
+        $input = $request->all();
+
+        Skill::create($input);
+
+        return redirect()->route('adskills')->with('success','Article created successfully');
+    }
 }

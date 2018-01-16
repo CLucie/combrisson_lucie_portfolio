@@ -5,7 +5,7 @@
 	<!-- Main -->
 	<main class="col-9">
 		<h3>
-			Projets <button type="button" class="btn btn-success">Ajouter</button>
+			Projets <a class="btn btn-success addprojet" href="#">Ajouter</a>
 		</h3>
 		<!-- Message -->
 		
