@@ -23,6 +23,7 @@ Route::get('/admin', 'AdminConnexionController@index')->name('connexion');
 	// Messages
 Route::get('/admin/messages', 'ContactController@admin')->name('admessages');
 Route::get('/admin/messages/delete', 'ContactController@destroy')->name('addelmessages');
+Route::post('/contact/send', 'ContactController@send')->name('adsendmessages');
 
 	// Qualifications/Diplomes
 Route::get('/admin/qualifications', 'QualifController@admin')->name('adqualification');

@@ -17,15 +17,27 @@ class ContactController extends Controller
     	return view('admin/adminmessages', compact('messages'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(){
         $supp = Message::where("id_message", "=" , $_GET['id'])->delete();
         return redirect('admin/messages') -> with('success','Article deleted successfully');
+    }
+
+    public function send(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'subject' => 'required',
+            'message' => 'required'
+        ]);
+
+        $input = $request->all();
+
+        Message::create($input);
+
+        // Mail::to('lucie.combrisson@laposte.net')->send(new classMailContact($form));
+
+        return redirect()->route('contact')->with('success','Votre message à bien été envoyé');
     }
 
 }

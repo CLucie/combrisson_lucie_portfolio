@@ -43,7 +43,7 @@ class QualifController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'diploma' => 'required',
-            'establishment' => 'required',
+            'establishment' => 'required'
         ]);
 
         $input = $request->all();
