@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Mailable;
 use App\Models\Message;
+use App\Http\Controllers\Controller;
+use App\Mail\SendMail;
 
 class ContactController extends Controller
 {
@@ -35,7 +39,7 @@ class ContactController extends Controller
 
         Message::create($input);
 
-        // Mail::to('lucie.combrisson@laposte.net')->send(new classMailContact($form));
+        Mail::to('lucie.combrisson@laposte.net')->send(new SendMail($request));
 
         return redirect()->route('contact')->with('success','Votre message à bien été envoyé');
     }
