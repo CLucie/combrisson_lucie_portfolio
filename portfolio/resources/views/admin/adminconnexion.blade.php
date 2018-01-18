@@ -20,18 +20,19 @@
 	<!-- Form login -->
 	<div class="row justify-content-center">
 		<div class="card-body vertical-center">
-			<form id="cardlogin" class="col-4 ">
+			<form method="POST" action="{{route('log')}}" id="cardlogin" class="col-4 ">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			    <p class="h5 text-center">Connexion</p>
 
 			    <div class="md-form">
 			        <i class="fa fa-envelope prefix grey-text"></i>
-			        <input type="text" id="defaultForm-email" class="form-control">
+			        <input type="text" name="email" class="form-control">
 			        <label for="defaultForm-email">E-mail</label>
 			    </div>
 
 			    <div class="md-form">
 			        <i class="fa fa-lock prefix grey-text"></i>
-			        <input type="password" id="defaultForm-pass" class="form-control">
+			        <input type="password" name="password" class="form-control">
 			        <label for="defaultForm-pass">Mot de passe</label>
 			    </div>
 

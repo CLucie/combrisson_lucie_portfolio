@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Skill;
+use Session;
 
 class SkillsController extends Controller
 {
@@ -12,12 +13,6 @@ class SkillsController extends Controller
     	return view('admin/adminskills', compact('skills'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(){
         $supp = Skill::where("id_skill", "=" , $_GET['id'])->delete();
         return redirect('admin/competences') -> with('success','Article deleted successfully');

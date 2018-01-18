@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Qualification;
 use App\Http\Requests\QualificationRequest;
+use Session;
 
 class QualifController extends Controller
 {

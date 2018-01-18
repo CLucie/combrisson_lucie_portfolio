@@ -8,6 +8,7 @@ use Illuminate\Mail\Mailable;
 use App\Models\Message;
 use App\Http\Controllers\Controller;
 use App\Mail\SendMail;
+use Session;
 
 class ContactController extends Controller
 {

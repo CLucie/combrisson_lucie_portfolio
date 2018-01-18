@@ -12,7 +12,7 @@
 */
 
 // Front
-Route::get('/', 'HomePageController@index')->name('home');
+Route::get('/', 'HomePageController@index')->name('accueil');
 Route::get('/competences', 'QualifskillController@index')->name('qualifskills');
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::get('/contact', 'ContactController@index')->name('contact');
@@ -20,6 +20,9 @@ Route::get('/admin', 'AdminConnexionController@index')->name('connexion');
 
 
 // Back
+	// Connexion
+Route::post('/admin/login', 'AdminConnexionController@log')->name('log');
+
 	// Messages
 Route::get('/admin/messages', 'ContactController@admin')->name('admessages');
 Route::get('/admin/messages/delete', 'ContactController@destroy')->name('addelmessages');
