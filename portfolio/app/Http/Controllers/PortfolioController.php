@@ -20,7 +20,7 @@ class PortfolioController extends Controller
 
     public function destroy(){
         $supp = Project::where("id_projet", "=" , $_GET['id'])->delete();
-        return redirect('admin/projets') -> with('success','Article deleted successfully');
+        return redirect('admin/projets') -> with('success','Le projet a bien été supprimé.');
     }
 
     public function edit()
@@ -34,7 +34,7 @@ class PortfolioController extends Controller
         $id = $request->id;
         $update = Project::where('id_projet', '=', $id )->update(array('src' => $request->src, 'alt' => $request->alt, 'title' => $request->title, 'description' => $request->description));
 
-        return redirect('admin/projets')->with('success','Article updated successfully');
+        return redirect('admin/projets')->with('success','Le projet a bien été mit à jour.');
     }
 
     public function create()
@@ -55,7 +55,7 @@ class PortfolioController extends Controller
 
         Project::create($input);
 
-        return redirect()->route('adportfolio')->with('success','Article created successfully');
+        return redirect()->route('adportfolio')->with('success','Le projet a bien été créé.');
     }
     
 }

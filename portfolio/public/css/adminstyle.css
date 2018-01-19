@@ -25,15 +25,19 @@ body{
 aside{
 	min-height: 100%;
 	min-height: 100vh;
-	padding: 5% 2% 0% 2%;
+	padding-right: 2%;
+	padding-top: 0.5%;
 	background-color: white;
+}
+
+main{
+	margin-left: 2%;
 }
 
 ul li{
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	text-align: center;
 }
 
 ul li a{
@@ -59,10 +63,17 @@ a:hover{
 	background-color: #FF8E00;
 }
 
+.btn-custom{
+	background-color: #FF8E00;
+}
+
 h3 {
-	padding-top: 2%;
 	margin-bottom: 2%;
 	font-weight: bold;
+}
+
+#titlemessage{
+	padding-top: 0.7%;
 }
 
 h5 {
@@ -80,4 +91,13 @@ h5 {
 
 #titledashboard {
 	text-align: center;
+}
+
+.deconnexion{
+	margin-left: 10%;
+	
+}
+
+.dropdown-menu{
+	background-color: #e9ecef;
 }

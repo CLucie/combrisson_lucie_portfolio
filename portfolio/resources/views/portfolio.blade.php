@@ -1,30 +1,11 @@
 @extends('layout')
 
 @section('contenu')
+<?php $page = "portfolio"; ?>
 <!-- Body -->
-	<!-- Navbar -->
-	<nav class="navbar fixed-top navbar-light bg-light">
-  		<a class="navbar-brand" href="{{route('home')}}">
-    		<img src="img/perso/cl.svg" width="40" height="40" alt="CL">
-  		</a>
-  		<ul class="nav">
-		  <li class="nav-item">
-		    <a class="nav-link" href="{{route('home')}}">Présentation</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="{{route('qualifskills')}}">Compétences</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link active navactive" href="{{route('portfolio')}}">Portfolio</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="{{route('contact')}}">Contact</a>
-		  </li>
-		</ul>
-	</nav>
-	<!-- End Navbar -->
-	<div class="container">
-		<div class="row justify-content-around vertical-center">
+	@include('inc.menu')
+	<div class="container contenu">
+		<div class="row justify-content-center vertical-center-carousel">
 	
 			<!-- Carousel Wrapper -->
 			<div id="carousel-example-2" class="col-12 carousel slide carousel-fade" data-ride="carousel">

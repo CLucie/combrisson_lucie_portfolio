@@ -16,7 +16,7 @@ class QualifController extends Controller
 
     public function destroy(){
         $supp = Qualification::where("id_qualification", "=" , $_GET['id'])->delete();
-        return redirect('admin/qualifications') -> with('success','Article deleted successfully');
+        return redirect('admin/qualifications') -> with('success','La qualification a bien été supprimée.');
     }
 
     public function edit()
@@ -30,7 +30,7 @@ class QualifController extends Controller
         $id = $request->id;
         $update = Qualification::where('id_qualification', '=', $id )->update(array('start_date' => $request->start_date, 'end_date' => $request->end_date, 'diploma' => $request->diploma, 'establishment' => $request->establishment, 'zip_code' => $request->zip_code, 'city' => $request->city));
 
-        return redirect('admin/qualifications')->with('success','Article updated successfully');
+        return redirect('admin/qualifications')->with('success','La qualification a bien été mise à jour.');
     }
 
     public function create()
@@ -51,6 +51,6 @@ class QualifController extends Controller
 
         Qualification::create($input);
 
-        return redirect()->route('adqualification')->with('success','Article created successfully');
+        return redirect()->route('adqualification')->with('success','La qualification a bien été créée.');
     }
 }

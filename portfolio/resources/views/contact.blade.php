@@ -1,29 +1,10 @@
 @extends('layout')
 
 @section('contenu')
+<?php $page = "contact"; ?>
 <!-- Body -->
-	<!-- Navbar -->
-	<nav class="navbar fixed-top navbar-light bg-light">
-  		<a class="navbar-brand" href="{{route('home')}}">
-    		<img src="img/perso/cl.svg" width="40" height="40" alt="CL">
-  		</a>
-  		<ul class="nav">
-		  <li class="nav-item">
-		    <a class="nav-link" href="{{route('home')}}">Présentation</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="{{route('qualifskills')}}">Compétences</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="{{route('portfolio')}}">Portfolio</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link active navactive" href="{{route('contact')}}">Contact</a>
-		  </li>
-		</ul>
-	</nav>
-	<!-- End Navbar -->
-	<main class="container">
+	@include('inc.menu')
+	<main class="container contenu">
 		<div class="row align-items-center justify-content-center">
 			<h4 class="text-center col-9">
 				Si vous avez des questions, n'hésitez pas à me contacter en utilisant le formulaire ci-dessous. 
@@ -51,7 +32,7 @@
 
 					    <div class="md-form">
 					        <i class="fas fa-envelope prefix grey-text"></i>
-					        <input type="text" name="email" class="form-control">
+					        <input type="email" name="email" class="form-control">
 					        <label for="email">Votre e-mail</label>
 					    </div>
 

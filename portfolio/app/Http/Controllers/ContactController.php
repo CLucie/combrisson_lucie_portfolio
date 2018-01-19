@@ -12,6 +12,7 @@ use Session;
 
 class ContactController extends Controller
 {
+
     public function index(){
     	$contacts = Message::all();
     	return view('contact', compact('contacts'));
@@ -24,7 +25,7 @@ class ContactController extends Controller
 
     public function destroy(){
         $supp = Message::where("id_message", "=" , $_GET['id'])->delete();
-        return redirect('admin/messages') -> with('success','Article deleted successfully');
+        return redirect('admin/messages') -> with('success','Le message a bien été supprimé.');
     }
 
     public function send(Request $request)

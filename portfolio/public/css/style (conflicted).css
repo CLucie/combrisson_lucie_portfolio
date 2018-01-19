@@ -42,17 +42,6 @@ body{
  justify-content: center;
 }
 
-.vertical-center-carousel {
- min-height: 100%;
- min-height: 100vh;
-
- display: flex;
- align-items: center;
- justify-content: center;
-
- padding: 8%;
-}
-
 nav li a{
 	font-weight: bold;
 	color: #FF8E00;
@@ -170,38 +159,4 @@ ul li {
 
 .defautclucie{
 	font-style: italic;
-}
-
-#infofooter{
-	/*margin-top: 5%;*/
-	padding-top: 0.4%;
-	padding-bottom: 0.4%;
-}
-
-/*sous-titre mentions légales*/
-.stitreml{
-	font-weight: bold;
-	color: #FF8E00;
-}
-/*paragraphe mentions légales*/
-.texteml{
-	padding-bottom: 2%;
-}
-/*span gras mentions légales*/
-#boldml{
-	font-weight: bold;
-}
-/*lien cnil*/
-#linkcnil{
-	text-decoration: none;
-	font-weight: bold;
-	color: #FF8E00;
-}
-#linkcnil:hover{
-	color: #FF5419;
-}
-
-/*container contenant le contenu de la page*/
-.contenu{
-	margin-bottom: 5%;
 }

@@ -22,11 +22,7 @@
 
 </body>
 <!-- Footer -->
-<footer class="container-fluid fixed-bottom text-center"">
-	<p>
-		CLucie &copy;2017 - <a id="mentionleg" href="#">Mentions Légales</a>
-	</p>
-</footer>
+@include('inc.footer')
 <!-- End Footer -->
 
 <!-- JS Bootstrap & MD -->
@@ -34,6 +30,7 @@
 <script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/mdb.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/script.js')}}"></script>
 
 </body>
 </html>

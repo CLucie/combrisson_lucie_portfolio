@@ -3,8 +3,8 @@
 @section('contenu')
 <!-- Body -->
 	<!-- Main -->
-	<main class="col-9">
-		<h3>
+	<main class="col-8">
+		<h3 id="titlemessage">
 			Messages
 		</h3>
 		<!-- Message -->

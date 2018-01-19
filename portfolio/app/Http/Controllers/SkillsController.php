@@ -15,7 +15,7 @@ class SkillsController extends Controller
 
     public function destroy(){
         $supp = Skill::where("id_skill", "=" , $_GET['id'])->delete();
-        return redirect('admin/competences') -> with('success','Article deleted successfully');
+        return redirect('admin/competences') -> with('success','La compétence a bien été supprimée.');
     }
 
     public function edit()
@@ -29,7 +29,7 @@ class SkillsController extends Controller
         $id = $request->id;
         $update = Skill::where('id_skill', '=', $id )->update(array('name' => $request->name, 'percentage' => $request->percentage, 'logo' => $request->logo));
 
-        return redirect('admin/competences')->with('success','Article updated successfully');
+        return redirect('admin/competences')->with('success','La compétence a bien été mise à jour.');
     }
 
     public function create()
@@ -49,6 +49,6 @@ class SkillsController extends Controller
 
         Skill::create($input);
 
-        return redirect()->route('adskills')->with('success','Article created successfully');
+        return redirect()->route('adskills')->with('success','La compétence a bien été créée.');
     }
 }

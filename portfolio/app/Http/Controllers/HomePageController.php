@@ -12,4 +12,9 @@ class HomePageController extends Controller
     	$me = User::find(1);
     	return view('homepage', compact('me'));
     }
+
+    public function mentionslegales()
+    {
+        return view('mentionslegales');
+    }
 }
