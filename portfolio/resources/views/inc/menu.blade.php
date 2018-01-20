@@ -24,7 +24,7 @@
       @auth
         <li class="nav-item dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                {{ Auth::user()->first_name }} <span class="caret"></span>
+                {{ Auth::user()->name }} {{ Auth::user()->first_name }} <span class="caret"><i class="fas fa-sign-out-alt"></i></span>
             </a>
 
             <ul class="dropdown-menu">
