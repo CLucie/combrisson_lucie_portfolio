@@ -7,7 +7,7 @@
 	<div class="container-fluid contenu">
 		<div class="row justify-content-around">
 			<!-- Aside Left -->
-			<aside class="col-3 text-center">
+			<aside class="col-xs-13 col-sm-5 col-md-5 col-lg-3 text-center">
 				<div class="card">
 				    <div class="text-center">
 				    	<img id="avatar" src="img/perso/avatar.png">
@@ -25,13 +25,13 @@
 			<!-- End Aside Left -->
 
 			<!-- Main -->
-			<main class="col-8">
+			<main class="col-xs-13 col-sm-7 col-md-6 col-lg-8">
 				<h1>
 					Bonjour, je suis <span class="highlight">{{$me->first_name}} {{$me->name}}</span>.
 				</h1>
-				<p>
-					Étudiante stagiaire de la formation professionnelle dispensée par l'organisme AFORMAC, pour l'obtention du Titre Professionnel Developpeur Web.
-				</p>
+				<p class="about">Depuis toujours intéressée par l'informatique et ses différentes facettes, quand l'opportunité d'une réorientation professionnelle s'est offerte à moi, je n'ai pas hésité une seconde.</p>
+
+				<p class="about">Me voici donc étudiante stagiaire de la formation professionnelle dispensée par l'organisme AFORMAC, pour l'obtention du Titre Professionnel Développeur Web.</p>
 			</main>
 			<!-- End Main -->
 		</div>

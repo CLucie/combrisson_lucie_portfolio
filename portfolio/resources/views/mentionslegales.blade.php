@@ -6,7 +6,7 @@
 @include('inc.menu')
 	<div class="container contenu">
 		<div class="row justify-content-center">
-			<main class="col-6">
+			<main class="col-xs-11 col-sm-10- col-md-9 col-lg-6">
 				<h2>
 					Mentions Légales
 				</h2>

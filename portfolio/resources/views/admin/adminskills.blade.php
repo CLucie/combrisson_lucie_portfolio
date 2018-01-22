@@ -3,7 +3,7 @@
 @section('contenu')
 <!-- Body -->
 	<!-- Main -->
-	<main class="col-8">
+	<main class="col-xs-13 col-sm-13 col-md-8 col-lg-8">
 		<h3>
 			Compétences <a class="btn btn-success addcompetence" href="#">Ajouter</a>
 		</h3>

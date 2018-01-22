@@ -18,7 +18,7 @@
     	@endif
 
 		<div class="row align-items-center justify-content-center">
-			<div id="cardform" class="card col-6">
+			<div id="cardform" class="card col-xs-12 col-sm-10- col-md-8 col-lg-6">
 
 				<!-- Form -->
 				<form method="POST" action="{{route('adsendmessages')}}">
