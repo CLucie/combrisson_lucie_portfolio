@@ -19,7 +19,7 @@
 <body class="container-fluid">
 	<div class="row justify-content-start">
 		<!-- aside -->
-		<aside col-xs-13 col-sm-13 col-md-5 col-lg-5>
+		<aside col-xs-12 col-sm-12 col-md-4 col-lg-4>
 			<h3 id="titledashboard">
 				Dashboard
 			</h3>

@@ -18,7 +18,7 @@
     <!-- Form login -->
     <div class="row justify-content-center">
         <div class="card-body vertical-center">
-            <form method="POST" action="{{ route('login') }}" id="cardlogin" class="col-4 ">
+            <form method="POST" action="{{ route('login') }}" id="cardlogin" class="col-xs-11 col-sm-11 col-md-8 col-lg-4">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <p class="h5 text-center">Connexion</p>
 
