@@ -2,12 +2,13 @@ TO DO LIST :
 
 Front :
 
+- [ ] Correction affichage sous FireFox.
 - [ ] Layout >		      	Menu Burger reseponsive.
 - [ ] Vue >		          	Page 404.
 - [ ] Portfolio >		    	Changer le slide portfolio en petites cartes.
 - [ ] Compétences/Skill >	Enlever les barres de progression.
 - [ ] Compétences/Skill >	Remplacer par de petites cartes avec le logo + pictogramme.
-- [ ] Compétences/Skill >	Gérer le nouveau système de "notation" (check vert = 1 ; check orange = 0 ; check rouge = -1)
+- [ ] Compétences/Skill >	Gérer le nouveau système de "notation" (check vert = 1 ; check orange = 0 ; check rouge = -1).
 
 Back :
 
