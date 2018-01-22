@@ -1,6 +1,6 @@
-To do list :
+TO DO LIST :
 
-FRONT
+Front :
 
 - [ ] Layout >			Menu Burger reseponsive.
 - [ ] Portfolio >			Changer le slide portfolio en petites cartes.
@@ -8,7 +8,7 @@ FRONT
 - [ ] Compétences/Skill >	Remplacer par de petites cartes avec le logo + pictogramme.
 - [ ] Compétences/Skill >	Gérer le nouveau système de "notation" (check vert = 1 ; check orange = 0 ; check rouge = -1)
 
-BACK
+Back :
 
 - [ ] Layout >			Aside Dashboard passe en menu burger en xs et sm.
 - [ ] Projets >			Ajouter un bouton de téléchargement de fichers, pour les images du portfolio.
