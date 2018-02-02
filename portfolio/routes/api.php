@@ -29,11 +29,24 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //         return Skill::get();
 // });
 
-Route::middleware('auth:api')->get('/user', function () {
-        header("Access-Control-Allow-Origin: *");
-        header('Access-Control-Allow-Methods: GET');
-        return User::get();
+Route::get('/user', function (Request $request) {
+
+       header("Access-Control-Allow-Origin: *");
+       header('Access-Control-Allow-Methods: get');
+
+       //$user = User::where('email', $request->email)->where('password', $request->password)->first();
+        
+          return [
+              'first_name' => Auth::user()->first_name,
+              'name' => Auth::user()->name
+         ];
 });
+
+// Route::middleware('auth:api')->get('/user', function () {
+//         header("Access-Control-Allow-Origin: *");
+//         header('Access-Control-Allow-Methods: GET');
+//         return User::get();
+// });
 
 Route::middleware('auth:api')->get('/skill', function () {
         header("Access-Control-Allow-Origin: *");
